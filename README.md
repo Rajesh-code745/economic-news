@@ -1,2 +1,0 @@
-# economic-news
-news 
