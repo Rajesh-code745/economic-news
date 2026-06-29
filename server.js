@@ -5,8 +5,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const MARKETAUX_KEY = process.env.MARKETAUX_KEY || "";
 
-// Serve the frontend (everything inside /public)
-app.use(express.static(path.join(__dirname, "public")));
+// Serve the frontend (index.html sits in the same root folder as this file)
+app.use(express.static(__dirname));
 
 // Secure proxy endpoint — the frontend calls this instead of Marketaux directly
 app.get("/api/news", async (req, res) => {
